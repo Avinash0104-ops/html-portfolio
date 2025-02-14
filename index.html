@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Portfolio of Avinash, a Web Developer showcasing projects and skills.">
+    <meta name="keywords" content="Web Developer, Portfolio, Avinash, Projects, HTML, CSS">
     <title>Avinash Web Portfolio</title>
     <style>
+        :root {
+            --primary-color: #007BFF;
+            --hover-color: #0056b3;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+            --border-color: #ccc;
+        }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: var(--background-color);
             padding: 20px;
         }
         h1, h2 {
-            color: #333;
+            color: var(--text-color);
         }
         hr {
-            border: 1px solid #ccc;
+            border: 1px solid var(--border-color);
             width: 80%;
         }
         .project {
@@ -32,35 +41,39 @@
             margin: 10px;
             text-decoration: none;
             color: white;
-            background-color: #007BFF;
+            background-color: var(--primary-color);
             padding: 10px 15px;
             border-radius: 5px;
         }
         .links a:hover {
-            background-color: #0056b3;
+            background-color: var(--hover-color);
         }
     </style>
 </head>
-
 <body>
-    <h1>Avinash Web Portfolio</h1>
-    <h2>I'm a Web Developer</h2>
-    <hr/>
-    
-    <div class="project">
-        <h3><a href="./public/birthday-invite.html">Birthday Invite</a></h3>
-        <img src="./assets/images/birthday-invite.png" height="200" alt="Birthday Invite Preview"/>
-    </div>
-    
-    <div class="project">
-        <h3><a href="./public/movie-ranking.html">Movie Ranking</a></h3>
-        <img src="./assets/images/movie-ranking.png" height="200" alt="Movie Ranking Preview" />
-    </div>
-    
-    <hr/>
-    <div class="links">
-        <a href="./public/about.html">About Me</a>
-        <a href="./public/contact.html">Contact Me</a>
-    </div>
+    <header>
+        <h1>Avinash Web Portfolio</h1>
+        <h2>I'm a Web Developer</h2>
+    </header>
+    <main>
+        <hr/>
+        <div class="project">
+            <h3><a href="./public/birthday-invite.html">Birthday Invite</a></h3>
+            <p>A simple web-based birthday invitation card.</p>
+            <img src="./assets/images/birthday-invite.png" height="200" alt="Birthday Invite Preview" loading="lazy"/>
+        </div>
+        <div class="project">
+            <h3><a href="./public/movie-ranking.html">Movie Ranking</a></h3>
+            <p>A web application for ranking movies.</p>
+            <img src="./assets/images/movie-ranking.png" height="200" alt="Movie Ranking Preview" loading="lazy"/>
+        </div>
+        <hr/>
+    </main>
+    <footer>
+        <div class="links">
+            <a href="./public/about.html">About Me</a>
+            <a href="./public/contact.html">Contact Me</a>
+        </div>
+    </footer>
 </body>
 </html>
